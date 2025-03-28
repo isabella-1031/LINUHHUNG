@@ -1,0 +1,90 @@
+/* 1) Load custom typeface */
+@font-face {
+  font-family: 'PixelatedElegance';
+  src: url(PixelatedElegance.ttf) format('truetype');
+  font-display: swap;
+}
+
+/* 2) Reset margins and paddings */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 60px 0 40px;
+  padding: 0 10px;
+  color: #ffffff;
+}
+
+/* 3) Ensure p5.js canvas displays as a block */
+canvas {
+  display: block;
+  margin: 0 auto;
+  cursor: url('CURSOR_WHITE.png') 16 16, auto; /* Desktop custom cursor */
+}
+
+body {
+  font-family: 'PixelatedElegance', sans-serif;
+  text-align: center;
+  user-select: none;
+  margin-top: 20px;
+  background: #0544d1 no-repeat center center;
+  background-size: cover;
+  cursor: url('CURSOR_WHITE.png') 16 16, auto;
+}
+
+/* 5) Palette styling */
+#colorPalette {
+  margin: 10px auto;
+}
+
+.colorOption {
+  display: inline-block;
+  width: 70px;  /* Adjust size if needed */
+  height: 70px; /* Adjust size if needed */
+  margin: 20px 15px;  /* Increase horizontal spacing to 15px */
+  border: 2px solid transparent;
+  background-size: cover;
+  background-position: center;
+}
+.selected {
+  border: 2px solid #000;
+}
+
+/* 6) Main Container for Side-by-Side Layout */
+#mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* 7) Canvas Container (Loom Frame) */
+#canvasContainer {
+  margin: 20px auto;
+  padding: 20px;
+  background: url('linuhhung.png') no-repeat center center;
+  background-size: contain;
+  border: 8px solid #f8a84d;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* 8) Pixel Art Grid Styling */
+#pixelCanvas {
+  border-collapse: collapse;
+  margin: 180px auto 200px;  /* Top margin: 200px, Bottom margin: 220px */
+  width: 1080px;             /* Grid width: 1080px (27 columns x 40px) */
+  table-layout: fixed;
+  background: rgba(255,255,255,0.5);
+}
+
+/* 9) Each Grid Cell as a Perfect Square (40px x 40px) */
+#pixelCanvas td {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #f8a84d;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
